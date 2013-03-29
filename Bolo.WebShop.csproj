@@ -69,6 +69,7 @@
     <Content Include="Styles\Images\bullets.png" />
     <Content Include="Styles\Images\sprites.png" />
     <Content Include="Styles\common.css" />
+    <Content Include="Styles\order.css" />
     <Content Include="Styles\shoppingcart.css" />
     <Content Include="Styles\shoppingcartwidget.css" />
     <Content Include="Web.config" />
@@ -87,6 +88,10 @@
       <Project>{9916839C-39FC-4CEB-A5AF-89CA7E87119F}</Project>
       <Name>Orchard.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Orchard.Autoroute\Orchard.Autoroute.csproj">
+      <Project>{66fccd76-2761-47e3-8d11-b45d0001ddaa}</Project>
+      <Name>Orchard.Autoroute</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Orchard.Projections\Orchard.Projections.csproj">
       <Project>{5531e894-d259-45a3-aa61-26dbe720c1ce}</Project>
       <Name>Orchard.Projections</Name>
@@ -98,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CheckoutController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Drivers\AddressPartDriver.cs" />
     <Compile Include="Drivers\CustomerPartDriver.cs" />
@@ -113,6 +119,9 @@
     <Compile Include="Models\AddressPartRecord.cs" />
     <Compile Include="Models\CustomerPart.cs" />
     <Compile Include="Models\CustomerPartRecord.cs" />
+    <Compile Include="Models\OrderDetailRecord.cs" />
+    <Compile Include="Models\OrderRecord.cs" />
+    <Compile Include="Models\OrderStatus.cs" />
     <Compile Include="Models\ProductPart.cs" />
     <Compile Include="Models\ProductPartRecord.cs" />
     <Compile Include="Models\ProductQuantity.cs" />
@@ -121,7 +130,9 @@
     <Compile Include="ResourceManifest.cs" />
     <Compile Include="Services\CustomerService.cs" />
     <Compile Include="Services\ICustomerService.cs" />
+    <Compile Include="Services\IOrderService.cs" />
     <Compile Include="Services\IShoppingCart.cs" />
+    <Compile Include="Services\OrderService.cs" />
     <Compile Include="Services\ShoppingCart.cs" />
     <Compile Include="ViewModels\AddressesViewModel.cs" />
     <Compile Include="ViewModels\AddressViewModel.cs" />
@@ -172,6 +183,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Checkout.Summary.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Order.Created.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

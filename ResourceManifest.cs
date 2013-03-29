@@ -27,6 +27,8 @@ namespace Bolo.WebShop
             manifest.DefineScript("Bolo.WebShop.ShoppingCart").SetUrl("shoppingcart.js").SetDependencies("jQuery", "jQuery_LinqJs", "ko");
 
             manifest.DefineStyle("Bolo.WebShop.Checkout.Summary").SetUrl("checkout-summary.css").SetDependencies("Bolo.WebShop.Common");
+
+            manifest.DefineStyle("Bolo.WebShop.Order").SetUrl("order.css").SetDependencies("Webshop.Common");
         }
     }
 }
