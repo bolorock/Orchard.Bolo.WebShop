@@ -1,0 +1,11 @@
+﻿Name: Bolo.WebShop
+AntiForgery: enabled
+Author: Bolo
+Website: http://orchardproject.net
+Version: 1.0
+OrchardVersion: 1.6
+Description: Orchard Webshop Module Demo
+Dependencies: Orchard.Projections,Orchard.Forms, Orchard.jQuery, AIM.LinqJs, Orchard.Knockout,Orchard.Widgets, Orchard.Users
+Features:
+    Bolo.WebShop:
+        Description: Description for feature Bolo.WebShop.

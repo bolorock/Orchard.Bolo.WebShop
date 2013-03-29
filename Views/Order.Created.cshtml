@@ -1,0 +1,83 @@
+﻿@{
+    Style.Require("Bolo.WebShop.Order");
+}
+<h2>@T("Order {0} has been created", -1)</h2>
+<p>@T("Please find your order details below")</p>
+ 
+<article class="order">
+    <header>
+        <ul>
+            <li>
+                <div class="field-label">Order Number</div>
+                <div class="field-value">1000</div>
+            </li>
+            <li>
+                <div class="field-label">Created</div>
+                <div class="field-value">01/20/2012 04:29 PM</div>
+            </li>
+        </ul>
+    </header>
+    <table>
+        <thead>
+            <tr>
+                <td>Article</td>
+                <td class="numeric">Unit Price</td>
+                <td class="numeric">Quantity</td>
+                <td class="numeric">Total Price</td>
+            </tr>
+        </thead>
+        <tbody>
+            @for (var i = 0; i < 3; i++) {
+                <tr>
+                    <td>Article Title @i</td>
+                    <td class="numeric">@29m.ToString("c")</td>
+                    <td class="numeric">1</td>
+                    <td class="numeric">@29m.ToString("c")</td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr class="separator"><td colspan="4">&nbsp;</td></tr>
+            <tr>
+                <td class="numeric label" colspan="2">Subtotal:</td>
+                <td class="numeric">@87m.ToString("c")</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="numeric label" colspan="2">VAT (19%):</td>
+                <td class="numeric">@16.53m.ToString("c")</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="numeric label" colspan="3">Total:</td>
+                <td class="numeric">@103.53m.ToString("c")</td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+</article>
+    
+<article class="addresses form">
+    <div class="invoice-address">
+        <h2>Invoice Address</h2>
+        <ul class="address-fields">
+            <li>Mr. Bauer</li>
+            <li>Address line 1</li>
+            <li>Address line 2</li>
+            <li>Zipcode</li>
+            <li>City</li>
+            <li>Country</li>
+        </ul>
+    </div>
+    <div class="shipping-address">
+        <h2>Shipping Address</h2>
+        <ul class="address-fields">
+            <li>Mr. Bauer</li>
+            <li>Address line 1</li>
+            <li>Address line 2</li>
+            <li>Zipcode</li>
+            <li>City</li>
+            <li>Country</li>
+        </ul>
+    </div>
+</article>
