@@ -103,7 +103,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CheckoutController.cs" />
-    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Drivers\AddressPartDriver.cs" />
     <Compile Include="Drivers\CustomerPartDriver.cs" />
@@ -119,9 +118,6 @@
     <Compile Include="Models\AddressPartRecord.cs" />
     <Compile Include="Models\CustomerPart.cs" />
     <Compile Include="Models\CustomerPartRecord.cs" />
-    <Compile Include="Models\OrderDetailRecord.cs" />
-    <Compile Include="Models\OrderRecord.cs" />
-    <Compile Include="Models\OrderStatus.cs" />
     <Compile Include="Models\ProductPart.cs" />
     <Compile Include="Models\ProductPartRecord.cs" />
     <Compile Include="Models\ProductQuantity.cs" />
@@ -130,9 +126,7 @@
     <Compile Include="ResourceManifest.cs" />
     <Compile Include="Services\CustomerService.cs" />
     <Compile Include="Services\ICustomerService.cs" />
-    <Compile Include="Services\IOrderService.cs" />
     <Compile Include="Services\IShoppingCart.cs" />
-    <Compile Include="Services\OrderService.cs" />
     <Compile Include="Services\ShoppingCart.cs" />
     <Compile Include="ViewModels\AddressesViewModel.cs" />
     <Compile Include="ViewModels\AddressViewModel.cs" />
@@ -183,9 +177,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Checkout.Summary.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Order.Created.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
